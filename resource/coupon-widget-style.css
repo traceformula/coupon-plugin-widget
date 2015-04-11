@@ -1,0 +1,52 @@
+#couponWidget{
+    background-color: #e1e1e1;
+    width: 100%;;
+    height: 270px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-right: 5px;
+    position:relative;
+    border-radius: 2%;
+}
+
+#couponLogo{
+    width: 30%;
+    float: left;
+}
+
+#couponLogo img{
+    width: 85px;
+    height: 85px;
+}
+
+#coupomTitle{
+    width: 70%;
+    float: left;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 20px;
+    padding-left: 10px
+}
+
+#couponDescription{
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    font-size: 11px;
+    float: left;
+    margin-top: 20px;
+    padding-right: 10px;
+}
+
+#couponButton{
+    bottom: 10px;
+}
+
+.couponItem{
+    height: 250px;
+    position:absolute;
+}
+
+.couponItem a{
+    color: #A7301F;
+}
