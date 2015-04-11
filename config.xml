@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <fileName>excel_data.xlsx</fileName>
+  <downloadUrl>http://localhost/testPhp/dowload/sampleinputfile.xlsx</downloadUrl>
+  <scheduleTime>30</scheduleTime>
+</config> 

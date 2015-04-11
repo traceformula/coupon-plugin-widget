@@ -1,8 +1,17 @@
 <?php
 /**
  * Description of Coupon_Widget
- * Author: Titan
+ *
+ * @author Titan
  */
+
+
+$xmlConfigFile = plugins_url('coupon-plugin-widget/config.xml');
+$xml=simplexml_load_file($xmlConfigFile) or die("Error: Cannot create object");
+$GLOBALS['fileUrl'] = $xml ->downloadUrl;
+$GLOBALS['fileName'] = $xml ->fileName;
+$GLOBALS['scheduleTime'] = $xml ->scheduleTime;
+
 class Coupon_Widget extends WP_Widget {   
     function __construct() {
         parent::__construct(
@@ -13,11 +22,7 @@ class Coupon_Widget extends WP_Widget {
     }
     
     function GET_XLSX_FILE_PATH() {
-        return wp_upload_dir()['path'] . '\sampleinputfile.xlsx';
-    }
-    
-    function GET_XLSX_FILE_URL() {
-        return "http://localhost/testPhp/dowload/sampleinputfile.xlsx";
+        return wp_upload_dir()['path'] .'\\'. $GLOBALS['fileName'];
     }
 
     function widget( $args, $instance ) {
